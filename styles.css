@@ -81,14 +81,3 @@ footer a {
     width: 100%; /* Full width on smaller screens */
   }
 }
-
-.img-link img {
-  width: 100%;
-  opacity: 0; /* Start with opacity 0 */
-  transition: opacity 4s ease; /* Smooth transition */
-}
-
-/* New CSS for fade-in animation */
-.img-link img.fade-in {
-  opacity: 1; /* Set opacity to 1 when fade-in class is added */
-}
