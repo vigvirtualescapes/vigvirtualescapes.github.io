@@ -45,8 +45,8 @@ p {
   padding: 5px;
 }
 .padded {
-  padding-left: 1in;
-  padding-right: 1in;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 0.5in;
 }
 
