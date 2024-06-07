@@ -1,53 +1,94 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
+
 body {
   background-color: #06161e;
   margin: 0;
-}
-main {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 5%;
-}
-header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main {
+  padding: 0 6em;
+  margin-bottom: 20px;
+}
+
+header,
 footer {
   display: flex;
-  background-color: #05da62;
   justify-content: center;
-  min-width: 100%;
-  margin-top: 20%;
+  align-items: center;
 }
-h1, h2, p {
+
+footer {
+  background-color: #05da62;
+  width: 100%;
+  padding: 8px 0;
+}
+
+h1,
+h2,
+p {
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
-h1, h2 {
-  color: #05da62;
-}
+
 h1 {
   font-size: 36px;
+  color: #05da62;
 }
+
 h2 {
   font-size: 28px;
+  color: #05da62;
 }
+
 p {
   font-size: 18px;
   color: white;
 }
-footer p, footer a {
+
+footer p,
+footer a {
   color: #06161e;
 }
+
 .img-links {
   width: 100%;
+  display: flex;
+  justify-content: space-between; /* Spread items evenly */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
 }
+
+.img-link {
+  width: 30%; /* Adjusted width for three items */
+  margin-bottom: 20px; /* Added margin between items */
+}
+
 .img-link img {
-  width: 400px;
-  max-width: 100vw;
-  float: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .img-link {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+.img-link img {
+  width: 100%;
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 4s ease; /* Smooth transition */
+}
+
+/* New CSS for fade-in animation */
+.img-link img.fade-in {
+  opacity: 1; /* Set opacity to 1 when fade-in class is added */
 }

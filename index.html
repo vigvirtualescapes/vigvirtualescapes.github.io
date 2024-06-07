@@ -4,6 +4,14 @@
 <head>
     <link rel="stylesheet" href="/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('.img-link img');
+            images.forEach(function(image) {
+                image.classList.add('fade-in');
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -24,13 +32,13 @@
             <h2>Select an experience:</h2>
 
             <div class="img-links">
-                <div class="img-link">
+                <div class="img-link" class="fade-in">
                     <a href="/crime-solvers"><img src="/graphics/transparent_crime_solvers.png"></a>
                 </div>
-                <div class="img-link">
+                <div class="img-link" class="fade-in">
                     <img src="/graphics/transparent_coming_soon.png">
                 </div>
-                <div class="img-link">
+                <div class="img-link" class="fade-in">
                     <img src="/graphics/transparent_coming_soon.png">
                 </div>
             </div>
