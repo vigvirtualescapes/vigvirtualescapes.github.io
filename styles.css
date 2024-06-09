@@ -17,13 +17,14 @@ body {
 }
 
 main {
-  padding: 6rem;
+  padding: 0 12rem;
   margin-bottom: 20px;
 }
 
 header,
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -123,6 +124,25 @@ footer a {
 
 .exp-logo h1 {
   margin-top: 10px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-bar a {
+  color: white;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16pt;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar a:hover {
+  text-decoration: overline;
 }
 
 @media (max-width: 768px) {

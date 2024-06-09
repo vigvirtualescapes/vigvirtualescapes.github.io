@@ -70,7 +70,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 10px;
     border-style: groove;
-    background: linear-gradient(to bottom, #d9d9d9, #bfbfbf);
+    background: linear-gradient(to bottom, #d9d9d9, #959595);
     overflow: hidden;
     cursor: pointer;
     text-transform: uppercase;
@@ -80,6 +80,10 @@
     margin: auto;
     width: 100%;
     color: black;
+}
+
+.flip-card-back button:hover {
+    background: linear-gradient(to top, #d9d9d9, #959595);
 }
 
 .flip-card-back button::before {
