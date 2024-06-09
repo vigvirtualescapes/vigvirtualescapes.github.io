@@ -60,7 +60,7 @@ dl, dt, dd {
   font-size: 18px;
   display: grid;
   grid-template-columns: max-content auto;
-  color: #8354da;
+  color: white;
 }
 
 dt {
