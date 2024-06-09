@@ -38,7 +38,10 @@ h1,
 h2,
 p,
 dl,
-ul {
+ul,
+dt,
+dd,
+li {
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -52,14 +55,10 @@ h2 {
   color: #05da62;
 }
 
-dl {
+dl, dt, dd {
   font-size: 18px;
   display: grid;
   grid-template-columns: max-content auto;
-}
-
-dt,
-dd {
   color: #8354da;
 }
 
@@ -75,7 +74,8 @@ dd {
 }
 
 p,
-ul {
+ul,
+li {
   font-size: 18px;
   color: white;
 }
