@@ -129,7 +129,8 @@ footer a {
   .img-link {
     width: 100%; /* Full width on smaller screens */
   }
-  h1 {
-    font-size: auto;
+  main {
+    padding: 0 3em;
+    margin-bottom: 20px;
   }
 }
