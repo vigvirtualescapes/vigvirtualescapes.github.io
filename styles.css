@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  padding: 0 6em;
+  padding: 6rem;
   margin-bottom: 20px;
 }
 
@@ -130,7 +130,7 @@ footer a {
     width: 100%; /* Full width on smaller screens */
   }
   main {
-    padding: 0 3em;
+    padding: 0 3rem;
     margin-bottom: 20px;
   }
 }
