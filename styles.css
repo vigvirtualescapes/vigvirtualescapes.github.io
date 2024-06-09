@@ -42,7 +42,8 @@ dl,
 ul,
 dt,
 dd,
-li {
+li,
+button {
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
