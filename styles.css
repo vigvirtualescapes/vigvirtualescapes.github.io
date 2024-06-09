@@ -116,6 +116,7 @@ footer a {
 }
 
 .exp-logo img{
+  pointer-events: none;
   max-width: 100%;
   width: 400px;
   margin-right: 20px;
@@ -127,22 +128,22 @@ footer a {
 }
 
 .nav-bar {
-  display: flex;
-  justify-content: right;
+  position: absolute;
+  right: 12rem;
+  top: 15rem;
 }
 
 .nav-bar a {
-  color: white;
-  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  color: #05da62;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16pt;
+  font-size: 18pt;
   margin: 0;
   padding: 0;
 }
 
 .nav-bar a:hover {
-  text-decoration: overline;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -152,5 +153,10 @@ footer a {
   main {
     padding: 0 3rem;
     margin-bottom: 20px;
+  }
+  .nav-bar {
+    display: none;
+    text-align: center;
+    padding-bottom: 5%;
   }
 }
