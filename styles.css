@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #06161e;
+  background-color: rgb(6, 22, 30);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,9 @@ footer {
 
 h1,
 h2,
-p {
+p,
+dl,
+ul {
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -50,7 +52,30 @@ h2 {
   color: #05da62;
 }
 
-p {
+dl {
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt,
+dd {
+  color: #8354da;
+}
+
+dt {
+  font-weight: bold;
+  grid-column-start: 1;
+  float: left;
+  clear: left;
+}
+
+dd {
+  grid-column-start: 2;
+}
+
+p,
+ul {
   font-size: 18px;
   color: white;
 }
@@ -76,8 +101,35 @@ footer a {
   width: 100%;
 }
 
+.cs-container {
+  background-color: rgba(6,22,30, 0.7);
+  background-image: url("/graphics/transparent_crime_solvers_background.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: auto;
+}
+
+.exp-logo {
+  width: 100%;
+}
+
+.exp-logo img{
+  max-width: 100%;
+  width: 400px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.exp-logo h1 {
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
   .img-link {
     width: 100%; /* Full width on smaller screens */
+  }
+  h1 {
+    font-size: auto;
   }
 }
