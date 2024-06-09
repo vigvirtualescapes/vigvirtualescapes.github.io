@@ -79,6 +79,7 @@
     z-index: 1;
     margin: auto;
     width: 100%;
+    color: black;
 }
 
 .flip-card-back button::before {
