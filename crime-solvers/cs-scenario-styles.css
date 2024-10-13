@@ -1,0 +1,173 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+}
+
+#main-wrapper {
+    z-index: 1;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f0e9d7;
+    margin: 0;
+}
+
+h1,
+.theme-toggle {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* .cover-close {
+    position: fixed;
+    width: 100vw;
+    background-color: rgb(6, 22, 30);
+    animation-name: close;
+    animation-duration: 1.5s;
+    z-index: 3;
+}
+
+.cover-open {
+    position: fixed;
+    width: 100vw;
+    background-color: rgb(6, 22, 30);
+    animation-name: open;
+    animation-duration: 1.5s;
+    z-index: 3;
+}
+
+@keyframes close {
+    0% {height: 0;}
+    100% {height: 100vh;}
+}
+
+@keyframes open {
+    0% {height: 100vh;}
+    100% {height: 0;}
+} */
+
+#loading-page {
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #8354da;
+    z-index: 2;
+    animation-name: reveal;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: reveal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+    100% {transform: translateY(-100%);}
+}
+
+@-webkit-keyframes reveal {
+    100% {-webkit-transform: translateY(-100%);}
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 140px;
+    height: 140px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f0e9d7;
+    border-radius: 60%;
+    border-top: 16px solid #2e1c50;
+    -webkit-animation: spin 5s linear;
+    animation: spin 5s linear;
+  }
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    45% { -webkit-opacity: 100;}
+    55% { -webkit-opacity: 0;}
+    100% { -webkit-transform: rotate(720deg); 
+            -webkit-opacity: 0;}
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    45% { opacity: 100;}
+    55% { opacity: 0;}
+    100% { transform: rotate(720deg); 
+            opacity: 0;}
+}
+
+header {
+    display: flex;
+    background-color: #2e1c50;
+    height: 5em;
+    padding: 5px;
+}
+
+.theme-toggle {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1em;
+    background-color: #f0e9d7;
+    color: #2e1c50;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.5em;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+input {
+    display: none;
+}
+
+.fullscreen-window {
+    display: none;
+}
+
+.fullscreen-inner {
+    background-image: url(/crime-solvers/graphics/Paper\ Texture.png);
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 0 0 50px black;
+}
+
+.dimmer {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.fullscreen-window h1 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+}
+
+.fullscreen-window .close-button {
+    font-size: 18pt;
+    position: relative;
+    margin-left: auto;
+    width: 1em;
+    cursor: pointer;
+}

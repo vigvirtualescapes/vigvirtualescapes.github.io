@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="theme-sheet" rel="stylesheet" href="/crime-solvers/cs-scenario-styles.css">
+    <link id="secondary-theme-sheet" rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body onload="loadFunc()">
+
+    <div id="loading-page">
+        <div id="loader"></div>
+    </div>
+
+    <div id="cover" class=""></div>
+
+    <div class="wrapper" id="main-wrapper">
+        
+        <header> 
+            <img src="/crime-solvers/graphics/transparent_crime_solvers_abbrev.png">
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-switch" onclick="toggleTheme('/crime-solvers/cs-scenario-styles-noir.css', 'Noir Theme', 'Default Theme')">
+                <span id="theme-text">Noir Theme</span>
+            </label>
+        </header>
+
+        <main>
+
+            <div class="fullscreen-window" id="debrief-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="debrief-button" onclick="closeWindow('debrief-button', 'debrief-window')">&times</div>
+                    <h1>Case Debrief</h1>
+                </div>
+            </div>
+
+        </main>
+        
+
+    </div>
+
+</body>
+<script src="/crime-solvers/cs-scripts.js"></script>
+</html>
