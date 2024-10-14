@@ -159,3 +159,13 @@ dd {
 .launch-button:hover {
     box-shadow: 0 4px rgb(6, 22, 30, 0.5);
 }
+
+.wrapper-answer {
+    display: flex;
+}
+
+.answer-sheet {
+    width: 100%;
+    height: 620vh;
+    border-radius: 0%;
+}
