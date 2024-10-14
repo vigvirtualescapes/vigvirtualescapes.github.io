@@ -39,7 +39,7 @@ function toggleTheme(sheet, name1, name2) {
 //     document.getElementById("main-wrapper").style.display = "block";
 // }
 
-// Open window
+// Close window
 function closeWindow (buttonID, windowID) {
     var closeButton = document.getElementById(buttonID);
     var fullscreenWindow = document.getElementById(windowID);
@@ -47,3 +47,8 @@ function closeWindow (buttonID, windowID) {
     fullscreenWindow.style.display = "none";
 }
 
+// Open window
+function openWindow (windowID) {
+    var fullscreenWindow = document.getElementById(windowID);
+    fullscreenWindow.style.display = "block";
+}

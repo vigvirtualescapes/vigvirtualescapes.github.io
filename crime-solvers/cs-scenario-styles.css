@@ -9,16 +9,20 @@ html {
 }
 
 #main-wrapper {
-    z-index: 1;
+    height: 100vh;
 }
 
 body {
-    min-height: 100vh;
+    display: flex;
     background-color: #f0e9d7;
     margin: 0;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
 }
 
 h1,
+h2,
 .theme-toggle {
     font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
@@ -52,12 +56,11 @@ h1,
 } */
 
 #loading-page {
-
     position: fixed;
     height: 100vh;
     width: 100vw;
     background-color: #8354da;
-    z-index: 2;
+    z-index: 3;
     animation-name: reveal;
     animation-duration: 3s;
     animation-delay: 2s;
@@ -109,8 +112,17 @@ h1,
 header {
     display: flex;
     background-color: #2e1c50;
-    height: 5em;
+    height: 10vh;
+    width: 100vw;
     padding: 5px;
+    text-align: center;
+}
+
+header h1 {
+    color: #f0e9d7;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
 }
 
 .theme-toggle {
@@ -134,26 +146,45 @@ input {
 
 .fullscreen-window {
     display: none;
+    position: absolute;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    top: 0;
 }
 
 .fullscreen-inner {
     background-image: url(/crime-solvers/graphics/Paper\ Texture.png);
-    position: fixed;
+    position: absolute;
+    height: 80%;
     left: 10%;
     right: 10%;
     top: 10%;
     bottom: 10%;
     border-radius: 10px;
     box-shadow: 0 0 50px black;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.fullscreen-inner::-webkit-scrollbar {
+    display: none;
 }
 
 .dimmer {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    max-height: 100vh;
+}
+
+#debrief-window {
+    display: block;
 }
 
 .fullscreen-window h1 {
@@ -164,10 +195,181 @@ input {
     user-select: none;
 }
 
-.fullscreen-window .close-button {
-    font-size: 18pt;
+.fullscreen-window h2 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    margin-left: 5%;
+    user-select: none;
+}
+
+.fullscreen-window h3 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 5%;
+    user-select: none;
+}
+
+.fullscreen-window p {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.fancy {
+    font-family: cursive !important;
+}
+
+.character-block {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.character-block img {
+    float: left;
+    width: 15%;
+    margin-left: 10%;
     position: relative;
-    margin-left: auto;
-    width: 1em;
+}
+
+.character-block p {
+    float: right;
+    width: 55%;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.fullscreen-window .close-button {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    font-weight: 900;
+    position: fixed;
+    right: 100px;
+    top: 35px;
     cursor: pointer;
+}
+
+.evidence-bin {
+    position: absolute;
+    background-color: #6a598b;
+    width: 30%;
+    height: 90vh;
+    text-align: center;
+    z-index: 1;
+    overflow-y: scroll;
+    padding-bottom: 3%;
+    scrollbar-color: #6a598b #2e1c50;
+    scroll-behavior: smooth;
+}
+
+.evidence-bin h1 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    font-size: 18pt;
+    text-transform: uppercase;
+}
+
+.evidence {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.evidence-button {
+    background-image: url(/crime-solvers/graphics/Paper\ Texture.png);
+    border-radius: 15px;
+    width: 75%;
+    height: 5em;
+    align-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transform: translate(0,0);
+    transition: 0.4s transform;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 1%;
+}
+
+.evidence-button p {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    user-select: none;
+}
+
+.evidence-button-drop {
+    background-color: #948f82;
+    border-radius: 15px;
+    width: 75%;
+    height: 5em;
+    position: absolute;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    z-index: 1;
+    transform: translate(3px,3px);
+    transition: 0.4s transform;
+}
+
+.evidence:hover .evidence-button {
+    transition: 0.4s transform;
+    transform: scale(1.1);
+}
+
+.evidence:hover .evidence-button-drop {
+    transition: 0.4s transform;
+    transform: scale(1.1) translate(5px,5px) rotate(2deg);
+}
+
+.evidence-img-wrapper {
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.evidence-img {
+    width: 70%;
+}
+
+.workspace {
+    position: absolute;
+    height: 90vh;
+    width: 65%;
+    margin-left: 35%;
+    margin-right: 0;
+    overflow-y: scroll;
+    scrollbar-color: #f0e9d7 #a59b83;
+    scroll-behavior: smooth;
+    padding-right: 5%;
+}
+
+.workspace h1, p, a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.workspace .external-link {
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: #2e1c50;
+    width: 10em;
+    height: 2em;
+    align-content: center;
+    text-align: center;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.workspace a {
+    color: white;
+    text-decoration: none;
 }
