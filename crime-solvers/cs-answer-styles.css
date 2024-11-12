@@ -1,0 +1,9 @@
+body {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.answer-wrapper {
+    display: flex;
+    justify-content: center;
+}

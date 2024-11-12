@@ -56,6 +56,7 @@ h2,
 } */
 
 #loading-page {
+    display: none;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -339,6 +340,7 @@ input {
 
 .evidence-img {
     width: 70%;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
 }
 
 .workspace {
@@ -355,21 +357,17 @@ input {
 
 .workspace h1, p, a {
     font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 }
 
 .workspace .external-link {
-    margin-left: auto;
-    border-radius: 10px;
     background-color: #2e1c50;
-    width: 10em;
-    height: 2em;
-    align-content: center;
     text-align: center;
-    margin-top: 3%;
-    cursor: pointer;
+    border-radius: 15pt;
+    width: 35%;
 }
 
-.workspace a {
+.workspace .external-link a {
     color: white;
-    text-decoration: none;
+    text-shadow: 0 0 15px white;
 }
