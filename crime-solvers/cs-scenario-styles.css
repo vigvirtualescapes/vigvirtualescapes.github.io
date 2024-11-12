@@ -56,7 +56,6 @@ h2,
 } */
 
 #loading-page {
-    display: none;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -355,7 +354,7 @@ input {
     padding-right: 5%;
 }
 
-.workspace h1, p, a {
+.workspace h1, p, a, ul {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
 }
