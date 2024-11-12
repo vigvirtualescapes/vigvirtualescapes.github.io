@@ -1,8 +1,4 @@
-body {
-  background-image: none;
-  background-color: rgb(103, 103, 103);
 
-}
 
 header {
   background-color: black;
@@ -24,4 +20,9 @@ header {
 
 .workspace .external-link {
   background-color: black;
+}
+
+body {
+  background-size: 0%;
+  background-color: rgb(103, 103, 103);
 }
