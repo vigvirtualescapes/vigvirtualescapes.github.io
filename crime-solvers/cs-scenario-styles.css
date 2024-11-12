@@ -362,8 +362,8 @@ input {
 .workspace .external-link {
     background-color: #2e1c50;
     text-align: center;
-    border-radius: 15pt;
-    width: 35%;
+    border-radius: 8pt;
+    width: 50%;
 }
 
 .workspace .external-link a {
