@@ -14,7 +14,7 @@ html {
 
 body {
     display: flex;
-    background-color: #f0e9d7;
+    background-image: url(/crime-solvers/graphics/Paper\ Texture.png);
     margin: 0;
     width: 100vw;
     height: 90vh;
