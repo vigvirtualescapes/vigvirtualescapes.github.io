@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="theme-sheet" rel="stylesheet" href="/crime-solvers/cs-scenario-styles.css">
+    <link id="secondary-theme-sheet" rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body onload="loadFunc()">
+
+    <div id="loading-page">
+        <div id="loader"></div>
+    </div>
+
+    <div id="cover" class=""></div>
+
+    <div class="wrapper" id="main-wrapper">
+        
+        <header> 
+            <img src="/crime-solvers/graphics/transparent_crime_solvers_abbrev.png">
+            <h1>"Death Sentence"</h1>
+            <div class="music">
+                <audio src="/crime-solvers/audio/secret-mission-201746.mp3" autoplay loop>
+                    <p>If you are reading this, it is because your browser does not support the audio element. </p>
+                </audio>
+            </div>
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-switch" onclick="toggleTheme('/crime-solvers/cs-scenario-styles-noir.css', 'Noir Theme', 'Default Theme')">
+                <span id="theme-text">Noir Theme</span>
+            </label>
+        </header>
+
+        <main>
+
+            <div class="fullscreen-window" id="debrief-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="debrief-button" onclick="closeWindow('debrief-button', 'debrief-window')">&times Close</div>
+                    <h1>Case Debrief</h1>
+                    <p>Acquaint yourself with the case and the suspects before viewing the evidence.</p>
+                    <h2>The Backstory</h2>
+                    <p>The Honorable M. M. Mahogany invited five guests to his mountain estate
+                        for a weekend getaway; “A holiday” he put it. “You five are the lucky
+                        winners.” Each was given a room for their own and was allowed to use all
+                        the amenities of his estate to their pleasure. Late one evening, the local
+                        police were contacted and informed that Mahogany had died!
+                        Unfortunately, a rock fell on the narrow, winding road leading to the
+                        house and prevented the police from arriving on the scene immediately. Only
+                        digital evidence could be gathered to figure out the solution to the crime.</p>
+                    <h2>The Characters*</h2>
+                    <div class="character-block">
+                        <img src="/crime-solvers\death-sentence\graphics\mahogany.png">
+                        <p class="character-descrip"><b>The Victim:</b><br>M. M.
+                            Mahogany has
+                            served as a local judge
+                            for over 30 years. His
+                            wife, Debora, died soon
+                            after they were married.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\mr-lavender.png">
+                        <p class="character-descrip"><b>Suspect #1:</b><br>Mr. Lawrence Lavender is known to be elusive, but also very cunning. His only occupation seems to be traveling and intrigue.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\mrs-aqua.png">
+                        <p class="character-descrip"><b>Suspect #2:</b><br>Mrs. Andrea Aqua is a well-known billionaire and heiress to the Aqua Family Fortune. She is known to be gentle but firm.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\dr-black.png">
+                        <p class="character-descrip"><b>Suspect #3:</b><br>Dr. Bethany Black is an intelligent surgeon and medical expert. She works for the renowned St. Joseph’s Medical Center.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\prof-copper.png">
+                        <p class="character-descrip"><b>Suspect #4:</b><br>Professor Cornelius Copper is an intense academic. He teaches at Garreth Bernard University and has multiple degrees.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\miss-leaf.png">
+                        <p class="character-descrip"><b>Suspect #5:</b><br>Miss Lana Leaf is a bright socialite. She works for a marketing company and manages a team of nearly 100 people.</p>
+                    </div>
+                    <p>*Note that <b>no character information carries over</b> from other Scenarios.</p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-1-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-1-button" onclick="closeWindow('evidence-1-button', 'evidence-1-window')">&times Close</div>
+                        <h1>Cell Phone Call Log</h1>
+                        <h2>876-4441 to 876-4434 | 7:58 PM</h2>
+                        <p>“The connection isn’t great here…Can you hear me?…
+                            Yes, I’m still at Mahogany’s estate. About half an
+                            hour ago, or so, I heard a loud noise in the other
+                            room…I’m getting afraid, dear, I’m not sure what’s
+                            happening…The computer in here is ancient, can’t
+                            get it to load…Yes, I tried that about forty-five
+                            minutes ago, it still said loading.”</p>
+                        <h2>876-4441 to 911 | 8:14 PM</h2>
+                        <p>“…QUICK!…Yes, come quick!…I’ve found Mr. Mahogany
+                            here in the foyer…There’s blood everywhere!”</p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-2-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-2-button" onclick="closeWindow('evidence-2-button', 'evidence-2-window')">&times Close</div>
+                    <h1>Cell Phone Call Log</h1>
+                    <h2>221-8321 to 132-5467 | 7:57 PM</h2>
+                    <p>“Yes, sir, this is him…I’m well, how are you?…I’m
+                        currently out of town so won’t be in for the week…
+                        I’ve got a class Monday and I was wondering if you
+                        could get some information out for me…”</p>
+                    <h2>221-8321 to 909-8831 | 8:13 PM</h2>
+                    <p>“Hi, honey…I’m well. We ate about an hour ago…Just
+                        spoke to the dean…Yes, I’m alone. Everyone else
+                        left at dinner, I stayed to get some work done…
+                        Honey, I’m going to have to call you back, I just
+                        heard someone scream!”</p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-3-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-3-button" onclick="closeWindow('evidence-3-button', 'evidence-3-window')">&times Close</div>
+                    <h1>Cell Phone Call Log</h1>
+                    <h2>567-6789 to 803-1002 | 7:27 PM</h2>
+                    <p>“…This is she…Oh, hello, thank you for responding,
+                        that was quick!…Yes…I’m sorry, it was embarrassing
+                        to ask…Thank you for understanding…I can, let me
+                        find a pen…I’m sorry I can’t find one…I’m out of
+                        town…Thank you, have a good evening.”</p>
+                    <h2>567-6789 to 567-6733 | 7:34 PM</h2>
+                    <p>“Hi, it’s me…I just got off the phone with them…
+                        Yep, no problem…Wow that was embarrassing…I know,
+                        it’s their job…Things are OK here…You should see
+                        this place. I’m in a room full of all these ornate
+                        chairs; you’d love it…Ok…Yes…Love you too, talk to
+                        you soon.”</p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-4-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-4-button" onclick="closeWindow('evidence-4-button', 'evidence-4-window')">&times Close</div>
+                        <h1>Downloaded Email</h1>
+                        <h2>Sent at 3:30 PM</h2> 
+                        <p> <b>TO:</b> payroll@stjosephmedical.com <br>
+                            <b>FROM:</b> bblack@stjosephmedical.com<br>
+                            <b>SUBJECT:</b> This month’s paycheck.<br><br>
+                            Dear Payroll,<br>
+                            This is somewhat of an embarrassing request, but
+                            I am going to have to ask for an advance on this
+                            month’s paycheck. I’ve run into desperate times
+                            and could use a salary boost. I hope you’ll be
+                            able to make this happen. I am out of town
+                            currently, so my response time may be delayed.
+                            Thank you for your consideration.<br><br>
+                            Sincerely,<br>
+                            Dr. Bethany Black</p> 
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-5-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-5-button" onclick="closeWindow('evidence-5-button', 'evidence-5-window')">&times Close</div>
+                    <h1>Downloaded Email</h1>
+                    <h2>Sent at 10:38 AM</h2> 
+                    <p> <b>TO:</b> info@bobscellservice.com <br>
+                        <b>FROM:</b> llavender@myemail.com<br>
+                        <b>SUBJECT:</b> Changing a plan<br><br>
+                            Hi,
+                            I currently have a Hi-Speed Cell plan and was wondering
+                            if it would be easy to switch to you guys.
+                            Thanks.<br><br>
+                            Sincerely,<br>
+                            Lawrence Lavender</p> 
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-6-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-6-button" onclick="closeWindow('evidence-6-button', 'evidence-6-window')">&times Close</div>
+                        <h1>House Diagram</h1>
+                        <h2>Courtesy of MahoganyEstate.org</h2>
+                        <div class="evidence-img-wrapper">
+                            <img class="evidence-img" src="/crime-solvers\death-sentence\graphics\house-diagram.png">
+                        </div>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-7-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-7-button" onclick="closeWindow('evidence-7-button', 'evidence-7-window')">&times Close</div>
+                    <div class="evidence-img-wrapper">
+                        <img class="evidence-img" src="/crime-solvers\death-sentence\graphics\phone-screenshot1.png">
+                    </div>    
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-8-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-8-button" onclick="closeWindow('evidence-8-button', 'evidence-8-window')">&times Close</div>
+                    <div class="evidence-img-wrapper">
+                        <img class="evidence-img" src="/crime-solvers\death-sentence\graphics\phone-screenshot2.png">
+                    </div>    
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-9-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-9-button" onclick="closeWindow('evidence-9-button', 'evidence-9-window')">&times Close</div>
+                    <div class="evidence-img-wrapper">
+                        <img class="evidence-img" src="/crime-solvers\death-sentence\graphics\phone-screenshot3.png">
+                    </div>    
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-10-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-10-button" onclick="closeWindow('evidence-10-button', 'evidence-10-window')">&times Close</div>
+                    <div class="evidence-img-wrapper">
+                        <img class="evidence-img" src="/crime-solvers\death-sentence\graphics\phone-screenshot4.png">
+                    </div>    
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-11-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-11-button" onclick="closeWindow('evidence-11-button', 'evidence-11-window')">&times Close</div>
+                        <h1>MAHOGANY ESTATE // MOTION SENSOR ACTIVITY LOG</h1>
+                        <p>
+                            **6:16 PM** <br>
+                            **ACTIVITY DETECTED // dining_room**  <br>
+                            **6:59 PM** <br>
+                            **ACTIVITY STOPPED // dining_room** <br>
+                            **7:14** <br>
+                            **ACTIVITY DETECTED // dining_room** <br>
+                            **8:15 PM** <br>
+                            **ACTIVITY STOPPED // dining_room**
+                        </p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-12-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-12-button" onclick="closeWindow('evidence-12-button', 'evidence-12-window')">&times Close</div>
+                    <h1>MAHOGANY ESTATE // MOTION SENSOR ACTIVITY LOG</h1>
+                    <p>
+                        **5:02 PM** <br> 
+                        **ACTIVITY DETECTED // kitchen** <br>
+                         **6:14 PM** <br> 
+                         **ACTIVITY STOPPED // kitchen** <br> 
+                         **6:17** <br> 
+                         **ACTIVITY DETECTED // kitchen** <br> 
+                         **6:55 PM** <br> 
+                         **ACTIVITY STOPPED // kitchen** <br> 
+                         **7:00** <br> 
+                         **ACTIVITY DETECTED // kitchen** <br> 
+                         **7:09 PM** <br> 
+                         **ACTIVITY STOPPED // kitchen** <br>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="evidence-bin">
+                <h1>Evidence</h1>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('debrief-window')">
+                        <p>Case Debrief (Start Here)</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-1-window')">
+                        <p>Cell Phone Call Log 1</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-2-window')">
+                        <p>Cell Phone Call Log 2</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-3-window')">
+                        <p>Cell Phone Call Log 3</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-4-window')">
+                        <p>Downloaded Email 1</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-5-window')">
+                        <p>Downloaded Email 2</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-6-window')">
+                        <p>House Diagram</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-7-window')">
+                        <p>Cell Phone Screenshot 1</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-8-window')">
+                        <p>Cell Phone Screenshot 2</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-9-window')">
+                        <p>Cell Phone Screenshot 3</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-10-window')">
+                        <p>Cell Phone Screenshot 4</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-11-window')">
+                        <p>Motion Sensor Activity Log 1</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-12-window')">
+                        <p>Motion Sensor Activity Log 2</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+            </div>
+
+            <div class="workspace">
+                
+                <h1>Case File</h1>
+                <p><b>Victim:</b> The Honorable M. M. Mahogany</p>
+                <p><b>Cause of Death:</b> Unknown</p>
+                <p><b>Location of Death:</b> Mahogany Estate</p>
+                <p><b>To Determine:</b></p>
+                <ul>          
+                    <li>The murderer</li>
+                    <li>The murder weapon</li>
+                    <li>The time of the murder</li>
+                    <li>The murderer's motive</li>
+                    <li>The location of each suspect at the time of the murder</li>
+                </ul>
+                <p><b>Case Notes:</b></p>
+                <textarea cols="45" rows="10" placeholder="Keep track of your thoughts here"></textarea>
+                <div class="external-link">
+                    <a href="/crime-solvers/death-sentence/answer-sheet.html" target="blank" rel="noopener noreferrer">
+                        <p><b>CLICK HERE TO MAKE YOUR FINAL ACCUSATION</b></p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+
+    </div>
+
+</body>
+<script src="/crime-solvers/cs-scripts.js"></script>
+</html>
