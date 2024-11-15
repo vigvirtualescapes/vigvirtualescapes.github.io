@@ -66,7 +66,7 @@ dd {
     padding-right: 10%;
     padding-top: 0;
     padding-bottom: 5%;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 5px 5px 40px black;
     filter: brightness(110%);
 }

@@ -52,3 +52,6 @@ function openWindow (windowID) {
     var fullscreenWindow = document.getElementById(windowID);
     fullscreenWindow.style.display = "block";
 }
+
+
+// Ask about autoplay
