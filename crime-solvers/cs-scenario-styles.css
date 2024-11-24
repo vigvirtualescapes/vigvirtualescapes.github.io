@@ -210,7 +210,7 @@ input {
     user-select: none;
 }
 
-.fullscreen-window p {
+.fullscreen-window p, li {
     color: black;
     font-family: 'Courier New', Courier, monospace;
     user-select: none;

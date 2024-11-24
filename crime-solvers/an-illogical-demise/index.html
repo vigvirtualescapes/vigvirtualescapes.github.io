@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="theme-sheet" rel="stylesheet" href="/crime-solvers/cs-scenario-styles.css">
+    <link id="secondary-theme-sheet" rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body onload="loadFunc()">
+
+    <div id="loading-page">
+        <div id="loader"></div>
+    </div>
+
+    <div id="cover" class=""></div>
+
+    <div class="wrapper" id="main-wrapper">
+        
+        <header> 
+            <img src="/crime-solvers/graphics/transparent_crime_solvers_abbrev.png">
+            <h1>"An Illogical Demise"</h1>
+            <div class="music">
+                <audio src="/crime-solvers/audio/secret-mission-201746.mp3" autoplay loop>
+                    <p>If you are reading this, it is because your browser does not support the audio element. </p>
+                </audio>
+            </div>
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-switch" onclick="toggleTheme('/crime-solvers/cs-scenario-styles-noir.css', 'Noir Theme', 'Default Theme')">
+                <span id="theme-text">Noir Theme</span>
+            </label>
+        </header>
+
+        <main>
+
+            <div class="fullscreen-window" id="debrief-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="debrief-button" onclick="closeWindow('debrief-button', 'debrief-window')">&times Close</div>
+                    <h1>Case Debrief</h1>
+                    <p>Acquaint yourself with the case and the suspects before viewing the evidence.</p>
+                    <h2>The Backstory</h2>
+                    <p>Monsieur Mateo Midnight was a famed logician. One fine June evening he
+                        decided to have five guests over to teach them all he knew of logic; he did
+                        this out of love of the craft, or, maybe, just sheer boredom. Unfortunately,
+                        one of the guests didn’t take a liking to Monsieur Midnight’s wordy
+                        games and killed him. However, the only directions to Monsieur
+                        Midnight’s house were too confusing for the police to arrive immediately.
+                        Therefore, they had to take statements, digitally, from each of the guests.
+                        However, they had become so versed in Monsieur Midnight’s teachings
+                        that their statements were clouded in syllogistic jargon. <br><br>(NOTE: Assume that if a 
+                        characters states something straightforwardly such as "I was in X when the murder occurred", then they are telling the truth)</p>
+                    <h2>The Characters*</h2>
+                    <div class="character-block">
+                        <img src="\crime-solvers\an-illogical-demise\graphics\midnight.png">
+                        <p class="character-descrip"><b>The Victim:</b><br>Monsieur
+                            Mateo Midnight, a
+                            logician and aspiring
+                            sumo wrestler, prided
+                            himself in his collection
+                            of over 200 brands of
+                            staplers.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\mr-lavender.png">
+                        <p class="character-descrip"><b>Suspect #1:</b><br>Mr. Lawrence Lavender is known to be elusive, but also very cunning. His only occupation seems to be traveling and intrigue.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\mrs-aqua.png">
+                        <p class="character-descrip"><b>Suspect #2:</b><br>Mrs. Andrea Aqua is a well-known billionaire and heiress to the Aqua Family Fortune. She is known to be gentle but firm.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\dr-black.png">
+                        <p class="character-descrip"><b>Suspect #3:</b><br>Dr. Bethany Black is an intelligent surgeon and medical expert. She works for the renowned St. Joseph’s Medical Center.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\prof-copper.png">
+                        <p class="character-descrip"><b>Suspect #4:</b><br>Professor Cornelius Copper is an intense academic. He teaches at Garreth Bernard University and has multiple degrees.</p>
+                    </div>
+                    <div class="character-block">
+                        <img src="/crime-solvers\graphics\miss-leaf.png">
+                        <p class="character-descrip"><b>Suspect #5:</b><br>Miss Lana Leaf is a bright socialite. She works for a marketing company and manages a team of nearly 100 people.</p>
+                    </div>
+                    <p>*Note that <b>no character information carries over</b> from other Scenarios.</p>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-1-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-1-button" onclick="closeWindow('evidence-1-button', 'evidence-1-window')">&times Close</div>
+                    <h1>OFFICIAL STATEMENT: MR. LAWRENCE LAVENDER</h1>
+                    <ul>
+                        <li>If Mrs. Aqua was the murderer, then she hit Monsieur
+                            Midnight over the head with a pipe.</li>
+                        <li>I was in the same room as Dr. Black when the murder
+                            occurred.</li>
+                        <li>If I committed the murder, then it was out of greed.</li>
+                        <li>I was either in the kitchen or the office when the
+                            murder occurred.</li>
+                        <li>The murder occurred between 9:30 PM and 11:00 PM</li>
+                        <li>“Whoever was in the dining room was the murderer.”
+                            This statement is only true if I was in the office.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-2-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-2-button" onclick="closeWindow('evidence-2-button', 'evidence-2-window')">&times Close</div>
+                    <h1>OFFICIAL STATEMENT: MRS. ANDREA AQUA</h1>
+                    <ul>
+                        <li>If Prof. Copper was the murderer, then he shot
+                            Monsieur Midnight with a gun.</li>
+                        <li>Dr. Black was not in the dining room when the murder
+                            occurred, nor was she on the landing.</li>
+                        <li>If I committed the murder, then it was out of anger.</li>
+                        <li>No one was in the sitting room when the murder
+                            occurred.</li>
+                        <li>I was either in the kitchen or the office when the
+                            murder occurred.</li>
+                        <li>“Whoever was on the landing was the murderer.” This
+                            statement is only true if I was on the lawn.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-3-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-3-button" onclick="closeWindow('evidence-3-button', 'evidence-3-window')">&times Close</div>
+                    <h1>OFFICIAL STATEMENT: DR. BETHANY BLACK</h1>
+                    <ul>
+                        <li>If Mr. Lavender was the murderer, then he poisoned
+                            Monsieur Midnight’s drink.</li>
+                        <li>If Miss Leaf was on the lawn when the murder occurred,
+                            then I was in the kitchen.</li>
+                        <li>If Mrs. Aqua was in the kitchen when the murder
+                            occurred, then I was in the office.</li>
+                        <li>If I committed the murder, then it was out of self-defense.</li>
+                        <li>If Miss Leaf was on the lawn, then Prof. Copper was in
+                            the sitting room. If Miss Leaf was on the Landing,
+                            Prof. Copper was in the dining room.</li>
+                        <li>“Whoever was on the lawn was the murderer.” This
+                            statement is only true if I was in the sitting room.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-4-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-4-button" onclick="closeWindow('evidence-4-button', 'evidence-4-window')">&times Close</div>
+                    <h1>OFFICIAL STATEMENT: PROF. CORNELIUS COPPER</h1>
+                    <ul>
+                        <li>If Miss Leaf was the murderer, then she stabbed
+                            Monsieur Midnight with a knife.</li>
+                        <li>Only one location on the property had two suspects in it
+                            when the murder occurred.</li>
+                        <li>If I committed the murder, then it was out of self-defense.</li>
+                        <li>Dr. Black was not in the kitchen when the murder
+                            occurred.</li>
+                        <li>If the murder occurred at 10:00 PM, then I was in the
+                            office.</li>
+                        <li>If the murder occurred at 10:30 PM, then Dr. Black was
+                            in the office.</li>
+                        <li>If the murder occurred at 11:00 PM, then Mr. Lavender
+                            was in the sitting room.</li>
+                        <li>“Whoever was in the kitchen was the murderer.” This
+                            statement is only true if I was in the office.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fullscreen-window" id="evidence-5-window">
+                <div class="dimmer"></div>
+                <div class="fullscreen-inner">
+                    <div class="close-button" id="evidence-5-button" onclick="closeWindow('evidence-5-button', 'evidence-5-window')">&times Close</div>
+                    <h1>OFFICIAL STATEMENT: MISS LANA LEAF</h1>
+                    <ul>
+                        <li>If Dr. Black was the Murderer, then she pushed
+                            Monsieur Midnight down the stairs.</li>
+                        <li>I was not in the dining room when the murder occurred.</li>
+                        <li>If the murder occurred at 9:30 PM, then I was in the
+                            office.</li>
+                        <li>If the murder occurred at 10:00 PM, then I was in the
+                            sitting room.</li>
+                        <li>If the murder occurred at 10:30 PM, then I was on the
+                            landing.</li>
+                        <li>If I committed the murder, then it was out of passion.</li>
+                        <li>“Whoever was in the office was the murderer.” This
+                            statement is only true if I was in the kitchen.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="evidence-bin">
+                <h1>Evidence</h1>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('debrief-window')">
+                        <p>Case Debrief (Start Here)</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-1-window')">
+                        <p>STATEMENT - Mr. Lawrence Lavender</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-2-window')">
+                        <p>STATEMENT - Mrs. Andrea Aqua</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-3-window')">
+                        <p>STATEMENT - Dr. Bethany Black</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-4-window')">
+                        <p>STATEMENT - Prof. Cornelius Copper</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+                <div class="evidence">
+                    <div class="evidence-button" onclick="openWindow('evidence-5-window')">
+                        <p>STATEMENT - Miss Lana Leaf</p>
+                    </div>
+                    <div class="evidence-button-drop"></div>
+                </div>
+            </div>
+
+            <div class="workspace">
+                
+                <h1>Case File</h1>
+                <p><b>Victim:</b> Monsieur Mateo Midnight</p>
+                <p><b>Cause of Death:</b> Unknown</p>
+                <p><b>Location of Death:</b> Midnight's House</p>
+                <p><b>To Determine:</b></p>
+                <ul>          
+                    <li>The murderer</li>
+                    <li>The murder weapon</li>
+                    <li>The time of the murder</li>
+                    <li>The murderer's motive</li>
+                    <li>The location of each suspect at the time of the murder</li>
+                </ul>
+                <p><b>Case Notes:</b></p>
+                <textarea cols="45" rows="10" placeholder="Keep track of your thoughts here"></textarea>
+                <div class="external-link">
+                    <a href="/crime-solvers/an-illogical-demise/answer-sheet.html" target="blank" rel="noopener noreferrer">
+                        <p><b>CLICK HERE TO MAKE YOUR FINAL ACCUSATION</b></p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+
+    </div>
+
+</body>
+<script src="/crime-solvers/cs-scripts.js"></script>
+</html>
