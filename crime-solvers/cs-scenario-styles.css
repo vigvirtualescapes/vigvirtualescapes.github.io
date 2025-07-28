@@ -77,12 +77,15 @@ h2,
     text-align: center;
 }
 
+#loading-page {
+    z-index: 3;
+}
+
 .animated-loading-page {
     position: fixed;
     height: 100vh;
     width: 100vw;
     background-color: #8354da;
-    z-index: 3;
     animation-name: reveal;
     animation-duration: 3s;
     animation-delay: 2s;
