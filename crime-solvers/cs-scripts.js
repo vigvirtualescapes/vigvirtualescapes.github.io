@@ -56,8 +56,8 @@ function openWindow (windowID) {
 // Play Theme Music
 function playTheme() {
         var audio = document.getElementById("theme-music");
+        audio.loop = true;
         audio.play();
-        audio.setAttribute("loop", "loop");
       }
 
 // Start Loader
