@@ -57,6 +57,10 @@ dd {
     box-shadow: 5px 5px 40px black;
 }
 
+#challenge {
+    background-image: url("../crime-solvers/graphics/case_file_challenge.png");
+}
+
 .flip-card-back {
     background-color: #e1c9af;
     transform: rotateY(180deg);
