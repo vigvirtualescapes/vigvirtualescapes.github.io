@@ -53,5 +53,13 @@ function openWindow (windowID) {
     fullscreenWindow.style.display = "block";
 }
 
+// Play Theme Music
+function playTheme() {
+        var audio = document.getElementById("theme-music");
+        audio.play();
+      }
 
-// Ask about autoplay
+// Start Loader
+function startLoader() {
+    document.getElementById("loading-page").className = "animated-loading-page"
+}

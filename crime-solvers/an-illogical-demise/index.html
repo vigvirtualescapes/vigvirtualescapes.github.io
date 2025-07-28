@@ -7,10 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
-<body onload="loadFunc()">
+<body>
+
+    <div class="fullscreen-pre-window" id="audio-ask">
+        <div class="center-choice">
+            <div class="center-choice-content">
+                <h1>Enable music?</h1>
+                    <label id="enable-music" class="theme-toggle">
+                        <input type="checkbox" onclick="playTheme(); closeWindow('enable-music', 'audio-ask'); startLoader()">
+                        <span>Yes</span>
+                        <audio id="theme-music" src="/crime-solvers/audio/secret-mission-201746.mp3" loop></audio>
+                    </label>
+                    <label id="disable-music" class="theme-toggle">
+                        <input type="checkbox" onclick="closeWindow('disable-music', 'audio-ask'); startLoader()">
+                        <span>No</span>
+                    </label>    
+                </div>        
+        </div>
+    </div>
 
     <div id="loading-page">
-        <div id="loader"></div>
+        <div class="loader"></div>
     </div>
 
     <div id="cover" class=""></div>
@@ -21,9 +38,7 @@
             <img src="/crime-solvers/graphics/transparent_crime_solvers_abbrev.png">
             <h1>"An Illogical Demise"</h1>
             <div class="music">
-                <audio src="/crime-solvers/audio/secret-mission-201746.mp3" autoplay loop>
-                    <p>If you are reading this, it is because your browser does not support the audio element. </p>
-                </audio>
+                
             </div>
             <label class="theme-toggle">
                 <input type="checkbox" id="theme-switch" onclick="toggleTheme('/crime-solvers/cs-scenario-styles-noir.css', 'Noir Theme', 'Default Theme')">
